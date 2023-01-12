@@ -1,6 +1,6 @@
 ﻿# Face Recognition algorithm for AR glasses with eye tracker
 
-#Target behind the project
+# Target behind the project
 Macular degeneration(MD) is a condition that affects the macula, which 
 is the part of the eye responsible for central vision.MD leeds to rapid 
 central vision loss and can make everyday activities like  recognising 
@@ -17,7 +17,7 @@ lot of time. To deal with we suggest the use of  AR smart glasses, embedded
 with eye trackers ,so that algorithm proccess a ROI in every frame. The 
 desired window will created with center the spot whre the user;s gaze is.
 
-
+# Demo 
 ![Demo](assets/demo.gif)
 The demo shows the result of the face recogntion system. The algorithm can apllied
 in glasses with Eye Tracker. The blue circle follows gaze. In this project we hadnt
@@ -42,7 +42,7 @@ The data should have the following structure.
                 ⋮
             └──n.jpg                                                                             
 ```
-####Steps
+#### Steps
 1. Place the dataset in the folder `Dataset/`
 2. run
     `python createDataset.py -ntr <number of train images per person> -nte <number of test images per person> -ndf <DATASET_NAME> -non <number of persons>`
