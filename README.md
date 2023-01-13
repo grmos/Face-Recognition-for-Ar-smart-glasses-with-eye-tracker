@@ -64,7 +64,7 @@ Download it and place it in `Feature_Extractor/pretrained/`
 run 
   `python train_eval.py -EMBEDDINGS 1 -EVAL 0 -ef "output/Embeddings.pickle" -vef "output/validation_Embeddings.pickle" -ff "output/features.pickle" -bval 1`
 - Notes
-  1.The features are the embeddings in a different format to pass as input in K-NN
+  1.The features are the embeddings in a different format to pass as input in K-NN.
   2.if you want to apply **data augmentation** run
   `python train_eval.py -EMBEDDINGS True -EVAL False -ef "output/Embeddings.pickle" -vef "output/validation_Embeddings.pickle" -ff "output/features.pickle"-bval 1 -DA True`
   3.If you dont want validation data run
