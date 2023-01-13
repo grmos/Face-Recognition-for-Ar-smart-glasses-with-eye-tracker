@@ -18,7 +18,7 @@ ap.add_argument("-e", "--EPOCHS", type=int, default=8000)
 ap.add_argument("-lr", "--learning_rate", type=float, default=0.001)
 ap.add_argument("-th_ANN", "--thresshold_ANN", type=float, default=0.95,
 	help="thresshold score for classification in ANN  ")
-ap.add_argument("-ms", "--modelsave", type=bool, default=False,
+ap.add_argument("-ms", "--modelsave", type=int, default=0,
 	help=" True if you want to save the model after training")
 ap.add_argument("-mp", "--modelpath", type=str, default="pretrained/classifier.hdf5",
 	help=" path for saving the model after training")

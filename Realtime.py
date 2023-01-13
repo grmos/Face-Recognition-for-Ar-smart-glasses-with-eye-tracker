@@ -14,10 +14,10 @@ from helper_functions import load_pretrained_model,to_input
 
 # construct the argument parse and parse the arguments
 ap = argparse.ArgumentParser()
-ap.add_argument("-wv", "--boolWriteVideo", type=bool, default=False,
+ap.add_argument("-wv", "--boolWriteVideo", type=int, default=0,
 	help="Write video in a *.mp4 file")
-ap.add_argument("-v", "--boolVideo", type=bool, default=True,
-	help="True-> Input a Video.mp4 ,False-> Input from camera ")
+ap.add_argument("-v", "--boolVideo", type=int, default=1,
+	help="1-> Input a Video.mp4 ,0-> Input from camera ")
 ap.add_argument("-cR", "--cameraResolution", type=str, default="4K",
 	help="Choose camera Resolution 4K or FHD")
 ap.add_argument("-mp", "--modelpath", type=str, default="pretrained/mydatabaseextra2model.hdf5",
