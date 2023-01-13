@@ -51,7 +51,8 @@ run
 - Notes
   1.If you want to test the model in blur testset run
   `python train_eval.py -EVAL 1 -KNN 1 -ANN 1 -bt 1 -ef "output_celebA/celebA_Embeddings.pickle" -ff "output_celebA/celebA_features.pickle" -mp "pretrained/classifier.hdf5"`
-  2.For more see the arguments in the script `train_eval.py`
+  2.The KNN score might be 192/192 ans ANN 72/72. That depends on the thressholds that can modify in the script/
+  3.For more see the arguments in the script `train_eval.py`
 
 
 
