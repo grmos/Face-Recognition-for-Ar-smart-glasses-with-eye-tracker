@@ -14,7 +14,7 @@ ap.add_argument("-td", "--TrainingData", type=str, default="output_celebA/celebA
 	help=" training data file")
 ap.add_argument("-vd", "--ValidationData", type=str, default="output_celebA/celebA_val_Embeddings.pickle",
 	help=" validation data file")
-ap.add_argument("-e", "--EPOCHS", type=int, default=8000)
+ap.add_argument("-ep", "--EPOCHS", type=int, required=True)
 ap.add_argument("-lr", "--learning_rate", type=float, default=0.001)
 ap.add_argument("-th_ANN", "--thresshold_ANN", type=float, default=0.95,
 	help="thresshold score for classification in ANN  ")
@@ -45,6 +45,7 @@ model.add((tf.keras.layers.Dense(trainY.shape[1],activation="softmax")))
 
 ##Configuration
 EPOCHS=args["EPOCHS"]  
+print(EPOCHS)
 lr=args["learning_rate"]  
 th_ANN=args["thresshold_ANN"]  
 BS=len(trainX)
