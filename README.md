@@ -26,6 +26,7 @@ cenet the circle's center in which we apply face detection and recogntion.
 
 # Enviroment
 Python == 3.6
+
 Install libraries: `pip3 install -r requirements.txt`
 
 # Data Preparation
