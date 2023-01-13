@@ -32,25 +32,25 @@ Download it and place it in `Feature_Extractor/pretrained/`
 
 # Create Embeddings
 run 
-  `python train_eval.py -EMBEDDINGS True -EVAL False -ef "output_celebA/celebA_Embeddings.pickle" -vef "output_celebA/celebA_val_Embeddings.pickle" -ff "output_celebA/celebA_features.pickle"`
+  `python train_eval.py -EMBEDDINGS 1 -EVAL 0 -ef "output_celebA/celebA_Embeddings.pickle" -vef "output_celebA/celebA_val_Embeddings.pickle" -ff "output_celebA/celebA_features.pickle"`
 - Notes
   1.The features are the embeddings in a different format to pass as input in K-NN
   2.if you want to apply **data augmentation** run
-  `python train_eval.py -EMBEDDINGS True -EVAL False -ef "output_celebA/celebA_Embeddings.pickle" -vef "output_celebA/celebA_val_Embeddings.pickle" -ff "output_celebA/celebA_features.pickle" -DA True`
+  `python train_eval.py -EMBEDDINGS 1 -EVAL 0 -ef "output_celebA/celebA_Embeddings.pickle" -vef "output_celebA/celebA_val_Embeddings.pickle" -ff "output_celebA/celebA_features.pickle" -DA 1`
 
 # Train neural Network for classification
 run
-  `python myneuralnetwork.py -td "output_celebA/celebA_Embeddings.pickle" -vd "output_celebA/celebA_val_Embeddings.pickle" -ms True -mp "pretrained/classifier.hdf5"`
+  `python myneuralnetwork.py -td "output_celebA/celebA_Embeddings.pickle" -vd "output_celebA/celebA_val_Embeddings.pickle" -ms 1 -mp "pretrained/classifier.hdf5"`
 - Notes
   1.The ANN has only one hidden layer with 64 neurons.You can change it with -nnh <Number of Neurons> argument.
   2.If you want a different architecture you can modify the script 
 
 # Evaluation of the models
 run
-  `python train_eval.py -KNN True -ANN True  -ef "output_celebA/celebA_Embeddings.pickle" -ff "output_celebA/celebA_features.pickle" -mp "pretrained/classifier.hdf5"`
+  `python train_eval.py -EVAL 1-KNN 1 -ANN 1  -ef "output_celebA/celebA_Embeddings.pickle" -ff "output_celebA/celebA_features.pickle" -mp "pretrained/classifier.hdf5"`
 - Notes
   1.If you want to test the model in blur testset run
-  `python train_eval.py -KNN True -ANN True -bt True -ef "output_celebA/celebA_Embeddings.pickle" -ff "output_celebA/celebA_features.pickle" -mp "pretrained/classifier.hdf5"`
+  `python train_eval.py -EVAL 1 -KNN 1 -ANN 1 -bt 1 -ef "output_celebA/celebA_Embeddings.pickle" -ff "output_celebA/celebA_features.pickle" -mp "pretrained/classifier.hdf5"`
   2.For more see the arguments in the script `train_eval.py`
 
 
