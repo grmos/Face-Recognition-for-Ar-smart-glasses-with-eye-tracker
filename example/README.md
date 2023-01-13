@@ -40,7 +40,7 @@ run
 
 # Train neural Network for classification
 run
-  `python myneuralnetwork.py -td "output_celebA/celebA_Embeddings.pickle" -vd "output_celebA/celebA_val_Embeddings.pickle" -ms 1 -mp "pretrained/classifier.hdf5"`
+  `python myneuralnetwork.py -td "output_celebA/celebA_Embeddings.pickle" -vd "output_celebA/celebA_val_Embeddings.pickle" -ep 1000 -ms 1 -mp "pretrained/classifier.hdf5"`
 - Notes
   1.The ANN has only one hidden layer with 64 neurons.You can change it with -nnh <Number of Neurons> argument.
   2.If you want a different architecture you can modify the script 
