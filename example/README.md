@@ -32,11 +32,11 @@ Download it and place it in `Feature_Extractor/pretrained/`
 
 # Create Embeddings
 run 
-  `python train_eval.py -EMBEDDINGS 1 -EVAL 0 -ef "output_celebA/celebA_Embeddings.pickle" -vef "output_celebA/celebA_val_Embeddings.pickle" -ff "output_celebA/celebA_features.pickle"`
+  `python train_eval.py -EMBEDDINGS 1 -EVAL 0 -ef "output_celebA/celebA_Embeddings.pickle" -vef "output_celebA/celebA_val_Embeddings.pickle" -ff "output_celebA/celebA_features.pickle" -bval 1`
 - Notes
   1.The features are the embeddings in a different format to pass as input in K-NN
   2.if you want to apply **data augmentation** run
-  `python train_eval.py -EMBEDDINGS 1 -EVAL 0 -ef "output_celebA/celebA_Embeddings.pickle" -vef "output_celebA/celebA_val_Embeddings.pickle" -ff "output_celebA/celebA_features.pickle" -DA 1`
+  `python train_eval.py -EMBEDDINGS 1 -EVAL 0 -ef "output_celebA/celebA_Embeddings.pickle" -vef "output_celebA/celebA_val_Embeddings.pickle" -ff "output_celebA/celebA_features.pickle" -bval 1-DA 1`
 
 # Train neural Network for classification
 run
