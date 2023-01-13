@@ -1,28 +1,11 @@
 ﻿# Face Recognition algorithm for AR glasses with eye tracker
 
 # Target behind the project
-Macular degeneration(MD) is a condition that affects the macula, which 
-is the part of the eye responsible for central vision.MD leeds to rapid 
-central vision loss and can make everyday activities like  recognising 
-faces very difficult. In this project we aim to create an algorithm for 
-AR smart glasses that a person can wear and be able to recognize faces.
-One of the biggest problem in these kind face recogntion problems is the
-low resolution and blury images. To figure this out we use [AdaFace](https://arxiv.org/abs/2204.00964)
-for feature extraction that is an algorithm that has trained in both high 
-and low resolution images. We also use 4K camera to have better accuracy.
-Two problemes arise that affect real time performance.First by using 4K
-camera we have to proccess more information and secondly if user in a 
-crowded place ,the algorithm should detect every single person that takes
-lot of time. To deal with we suggest the use of  AR smart glasses, embedded 
-with eye trackers ,so that algorithm proccess a ROI in every frame. The 
-desired window will created with center the spot whre the user;s gaze is.
+Macular degeneration (MD) is a condition that affects the macula, which is the part of the eye responsible for the central vision. MD leads to rapid central vision loss and can make everyday activities like recognizing faces very difficult. In this project we aim to create an algorithm for AR smart glasses that a person can wear and be able to recognize faces. One of the biggest problems in these kinds of face recognition systems is the low resolution and blurry images. To figure this out we used Adaface for feature extraction which is an algorithm that has been trained in both high and low resolution images. We also used a 4K camera to have better accuracy. This resulted in the occurrence of two problems that affect the real time performance.  Firstly, by using the 4K camera we have to process more pieces of information and secondly if the user is in a crowded place, the algorithm has to detect every single person and therefore takes a lot of time.  To deal with that we suggest the use of AR glasses, embedded with eye trackers, so that the algorithm will process a ROI in every frame. The desired window has as a center the spot where the user’s gaze is located.
 
 # Demo 
 ![Demo](assets/demo.gif)
-The demo shows the result of the face recogntion system. The algorithm can apllied
-in glasses with Eye Tracker. The blue circle follows gaze. In this project we hadnt
-an eye tracker so the circle moves with the mouse. After that step we pass a ROI with
-cenet the circle's center in which we apply face detection and recogntion.
+The demo shows the result of the face recognition system. The algorithm can be applied in the glasses with Eye Tracker. The blue circle follows the gaze of the person wearing them. In this project we didn’t have an eye tracker so the circle is moved by the mouse of the PC. After that step we included as an entrance to the system a ROI which core is the center of the circle in which we apply the face detection and recognition.
 
 # Enviroment
 Python == 3.6
