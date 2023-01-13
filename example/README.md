@@ -47,7 +47,7 @@ run
 
 # Evaluation of the models
 run
-  `python train_eval.py -EVAL 1-KNN 1 -ANN 1  -ef "output_celebA/celebA_Embeddings.pickle" -ff "output_celebA/celebA_features.pickle" -mp "pretrained/classifier.hdf5"`
+  `python train_eval.py -EVAL 1 -KNN 1 -ANN 1  -ef "output_celebA/celebA_Embeddings.pickle" -ff "output_celebA/celebA_features.pickle" -mp "pretrained/classifier.hdf5"`
 - Notes
   1.If you want to test the model in blur testset run
   `python train_eval.py -EVAL 1 -KNN 1 -ANN 1 -bt 1 -ef "output_celebA/celebA_Embeddings.pickle" -ff "output_celebA/celebA_features.pickle" -mp "pretrained/classifier.hdf5"`
