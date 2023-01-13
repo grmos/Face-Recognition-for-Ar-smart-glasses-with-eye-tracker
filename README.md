@@ -26,7 +26,6 @@ cenet the circle's center in which we apply face detection and recogntion.
 
 # Enviroment
 Python == 3.6
-
 Install libraries: `pip3 install -r requirements.txt`
 
 # Data Preparation
@@ -64,28 +63,28 @@ Download it and place it in `Feature_Extractor/pretrained/`
 run 
   `python train_eval.py -EMBEDDINGS 1 -EVAL 0 -ef "output/Embeddings.pickle" -vef "output/validation_Embeddings.pickle" -ff "output/features.pickle" -bval 1`
 - Notes
-1.The features are the embeddings in a different format to pass as input in K-NN.
-2.if you want to apply **data augmentation** run
+1. The features are the embeddings in a different format to pass as input in K-NN.
+2. if you want to apply **data augmentation** run
   `python train_eval.py -EMBEDDINGS True -EVAL False -ef "output/Embeddings.pickle" -vef "output/validation_Embeddings.pickle" -ff "output/features.pickle"-bval 1 -DA True`
-3.If you dont want validation data run
+3. If you dont want validation data run
     `python train_eval.py -EMBEDDINGS 1 -EVAL 0 -ef "output/Embeddings.pickle" -ff "output/features.pickle" -bval 0`
 
 # Train neural Network for classification
 run
   `python myneuralnetwork.py -td "output/Embeddings.pickle" -vd "output/validation_Embeddings.pickle" -ms 1 -mp "pretrained/classifier.hdf5"`
 - Notes
-1.The ANN has only one hidden layer with 64 neurons.You can change it with -nnh <Number of Neurons> argument.
-2.If you want a different architecture you can modify the script 
-3.If you havent create validation data for previous step run
+1. The ANN has only one hidden layer with 64 neurons.You can change it with -nnh <Number of Neurons> argument.
+2. If you want a different architecture you can modify the script 
+3. If you havent create validation data for previous step run
     `python myneuralnetwork.py -td "output/Embeddings.pickle" -vd "output/validation_Embeddings.pickle" -bvd 0 -ms 1 -mp "pretrained/classifier.hdf5"`
 
 # Evaluation of the models
 run
   `python train_eval.py -EVAL 1 -KNN 1 -ANN 1  -ef "output/Embeddings.pickle" -ff "output/features.pickle" -mp "pretrained/classifier.hdf5"`
 - Notes
-1.If you want to test the model in blur testset run
+1. If you want to test the model in blur testset run
   `python train_eval.py -EVAL 1 -KNN 1 -ANN 1 -bt 1 -ef "output/Embeddings.pickle" -ff "output/features.pickle" -mp "pretrained/classifier.hdf5"`
-2.For more see the arguments in the script `train_eval.py`
+2. For more see the arguments in the script `train_eval.py`
 
 # Real time performance
 run
