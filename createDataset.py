@@ -7,7 +7,7 @@ import argparse
 # construct the argument parse and parse the arguments
 ap = argparse.ArgumentParser()
 ap.add_argument("-ntr", "--numoftrain", type=int, default=12,
-	help="number of train images per person.If you  want all examples for training put float('inf') ")
+	help="number of train images per person.If you  want all examples for training put a big number (5000) ")
 ap.add_argument("-nte", "--numoftest", type=int, default=6,
 	help="number of test images per person.If you dont want testset put 0 ")
 ap.add_argument("-ndf", "--nameofdf", type=str, default="CelebDataProcessed",
@@ -45,11 +45,13 @@ for (i, imagePath) in enumerate(imagePaths):
         if not os.path.exists(nametrainsubfolder):
             os.makedirs(nametrainsubfolder)
         picture = Image.open(imagePath)  
+        picture = picture.convert('RGB')
         picture.save(nametrainsubfolder+"/"+"{}.jpg".format(counter)) 
     elif(counter>args["numoftrain"] and counter<=args["numoftrain"]+args["numoftest"]):
         if not os.path.exists(nametestsubfolder):
             os.makedirs(nametestsubfolder)
-        picture = Image.open(imagePath)  
+        picture = Image.open(imagePath) 
+        picture = picture.convert('RGB')
         picture.save(nametestsubfolder+"/"+"{}.jpg".format(counter-args["numoftrain"]))
     else:
         continue
