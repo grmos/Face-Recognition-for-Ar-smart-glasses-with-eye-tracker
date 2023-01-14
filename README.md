@@ -30,9 +30,11 @@ The data should have the following structure.
 2. run
     `python createDataset.py -ntr <number of train images per person> -nte <number of test images per person> -ndf <DATASET_NAME> -non <number of persons>`
 - Notes
-   if you want all data for training and no testset run
-    `python createDataset.py -ntr  float('inf') -ndf <DATASET_NAME>`
-
+1. if you want all data for training and no testset run
+    `python createDataset.py -ntr  <large number> -ndf <DATASET_NAME>`
+lareg number should be at least max(class images)
+2. If you have a trainset and a testset folder run python `createDataset.py -ntr 5000 -ndf <TRAIN_DATASET_NAME>` and then `python createDataset.py -ntr 0 -nte 5000 -ndf <TEST_DATASET_NAME>`
+  
 # Load Pretrained Models
 Pretrained model from [this](https://github.com/mk-minchul/AdaFace).
 
