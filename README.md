@@ -50,7 +50,7 @@ run
 - Notes
 1. The features are the embeddings in a different format to pass as input in K-NN.
 2. if you want to apply **data augmentation** run
-  `python train_eval.py -EMBEDDINGS True -EVAL False -ef "output/Embeddings.pickle" -vef "output/validation_Embeddings.pickle" -ff "output/features.pickle"-bval 1 -DA True`
+  `python train_eval.py -EMBEDDINGS 1 -EVAL 0 -ef "output/Embeddings.pickle" -vef "output/validation_Embeddings.pickle" -ff "output/features.pickle"-bval 1 -DA 1`
 3. If you dont want validation data run
     `python train_eval.py -EMBEDDINGS 1 -EVAL 0 -ef "output/Embeddings.pickle" -ff "output/features.pickle" -bval 0`
 
