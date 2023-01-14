@@ -56,12 +56,12 @@ run
 
 # Train neural Network for classification
 run
-  `python myneuralnetwork.py -td "output/Embeddings.pickle" -vd "output/validation_Embeddings.pickle" -ms 1 -mp "pretrained/classifier.hdf5"`
+  `python myneuralnetwork.py -td "output/Embeddings.pickle" -vd "output/validation_Embeddings.pickle" -ep 5000 -ms 1 -mp "pretrained/classifier.hdf5"`
 - Notes
 1. The ANN has only one hidden layer with 64 neurons.You can change it with -nnh <Number of Neurons> argument.
 2. If you want a different architecture you can modify the script 
 3. If you havent create validation data for previous step run
-    `python myneuralnetwork.py -td "output/Embeddings.pickle" -vd "output/validation_Embeddings.pickle" -bvd 0 -ms 1 -mp "pretrained/classifier.hdf5"`
+    `python myneuralnetwork.py -td "output/Embeddings.pickle" -vd "output/validation_Embeddings.pickle" -bvd 0 -ep 5000 -ms 1 -mp "pretrained/classifier.hdf5"`
 
 # Evaluation of the models
 run
