@@ -8,9 +8,9 @@ Macular degeneration (MD) is a condition that affects the macula, which is the p
 The demo shows the result of the face recognition system. The algorithm can be applied in the glasses with Eye Tracker. The blue circle follows the gaze of the person wearing them. In this project we didn’t have an eye tracker so the circle is moved by the mouse of the PC. After that step we included as an entrance to the system a ROI which core is the center of the circle in which we apply the face detection and recognition.
 
 # Enviroment
-** Python == 3.6.13
-** Install libraries: `pip3 install -r requirements.txt`
-** conda == 22.9.0
+- Python == 3.6.13
+- Install libraries: `pip3 install -r requirements.txt`
+- conda == 22.9.0
 
 # Data Preparation
 The data should have the following structure.
