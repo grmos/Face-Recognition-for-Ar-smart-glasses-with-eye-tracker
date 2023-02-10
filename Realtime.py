@@ -127,7 +127,7 @@ if(args[ "boolWriteVideo"]):
 	out = cv2.VideoWriter('demo2.avi',cv2.VideoWriter_fourcc(*'DIVX'), 45, (990,540))
 	for i in range(len(img_array)):
 		out.write(img_array[i])
-		out.release()
+	out.release()
 vs.release()
 cv2.destroyAllWindows()
 	
